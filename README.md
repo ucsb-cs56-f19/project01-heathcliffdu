@@ -1,3 +1,5 @@
+https://ucsb-cs56-f19.github.io/lab07-heathcliffdu/
+
 A simple Spring Boot webapp using:
 * Thymeleaf templating
 * Pulling in Bootstrap from CDN.
