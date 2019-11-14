@@ -1,5 +1,4 @@
-repo name: https://ucsb-cs56-f19.github.io/lab07-heathcliffdu/
-on heroku: https://cs56-f19-lab07-heathcliffdu.herokuapp.com
+https://ucsb-cs56-f19.github.io/lab07-heathcliffdu/
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
