@@ -1,10 +1,10 @@
-Link to github repo: https://github.com/ucsb-cs56-f19/lab07-heathcliffdu/
+Link to github repo: https://github.com/ucsb-cs56-f19/project01-heathcliffdu/
 
-Link to Javadoc: https://ucsb-cs56-f19.github.io/lab07-heathcliffdu/
+Link to Javadoc: https://ucsb-cs56-f19.github.io/project01-heathcliffdu/
 
-Link to heroku: https://cs56-f19-lab07-heathcliffdu.herokuapp.com
+Link to heroku: https://cs56-f19-project1-heathcliffdu.herokuapp.com
 
-Link to Travis-Ci: https://travis-ci.org/ucsb-cs56-f19/lab07-heathcliffdu
+Link to Travis-Ci: https://travis-ci.org/ucsb-cs56-f19/project01-heathcliffdu
 
 A simple Spring Boot webapp using:
 * Thymeleaf templating
