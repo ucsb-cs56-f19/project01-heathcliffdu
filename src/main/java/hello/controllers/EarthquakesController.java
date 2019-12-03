@@ -1,7 +1,7 @@
 package hello.controllers;
 
 import hello.services.EarthquakeQueryService;
-import hello.EqSearch;
+import hello.searches.EqSearch;
 
 
 import hello.geojson.FeatureCollection;
