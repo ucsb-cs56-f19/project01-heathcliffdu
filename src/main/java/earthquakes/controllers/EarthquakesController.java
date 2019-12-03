@@ -1,10 +1,10 @@
-package hello.controllers;
+package earthquakes.controllers;
 
-import hello.services.EarthquakeQueryService;
-import hello.searches.EqSearch;
+import earthquakes.services.EarthquakeQueryService;
+import earthquakes.searches.EqSearch;
 
 
-import hello.geojson.FeatureCollection;
+import earthquakes.geojson.FeatureCollection;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

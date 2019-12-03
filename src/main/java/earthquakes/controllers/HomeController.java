@@ -1,6 +1,6 @@
-package hello.controllers;
+package earthquakes.controllers;
 
-import hello.geojson.FeatureCollection;
+import earthquakes.geojson.FeatureCollection;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
