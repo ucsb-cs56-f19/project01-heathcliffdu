@@ -1,6 +1,6 @@
 package earthquakes.controllers;
 
-import earthquakes.services.EarthquakeQueryService;
+import earthquakes.services.LocationQueryService;
 import earthquakes.searches.LocSearch;
 
 
@@ -31,9 +31,13 @@ public class LocationController {
     }
 
     @GetMapping("/locations/results")
-    public String getLocationResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
+    public String getLocationsResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
             LocSearch locSearch) {
+        LocationQueryService e =
+                new LocationQueryService();
         model.addAttribute("locSearch", locSearch);
+        String json = e.getJSON(locSearch.getLocation());
+        model.addAttribute("json", json);
         return "locations/results";
     }
 }
