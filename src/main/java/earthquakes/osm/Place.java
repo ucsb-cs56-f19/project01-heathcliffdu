@@ -21,10 +21,10 @@ public class Place {
   private static Logger logger = LoggerFactory.getLogger(Place.class);
 
    /**
-     * Create a <List>Place object from json representation
+     * Create a FeatureCollection object from json representation
      * 
      * @param json String of json returned by API endpoint {@code /classes/search}
-     * @return a new List<Place> object
+     * @return a new FeatureCollection object
      * @see <a href=
      *      "https://tools.ietf.org/html/rfc7946">https://tools.ietf.org/html/rfc7946</a>
      */
