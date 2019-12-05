@@ -11,21 +11,26 @@
       <h1>Favorite Locations</h1>
       <table class="table">
           <thead>
-              <tr>
-                  <th>id</th>
-                  <th>placeId</th>
-                  <th>name</th>
-                  <th>latitude</th>
-                  <th>longitude</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr th:each="l: ${locations}">
-                <td th:text="${l.id}"></td>
-                <td th:text="${l.placeId}"></td>
-                <td th:text="${l.name}"></td>
-                <td th:text="${l.latitude}"></td>
-                <td th:text="${l.longitude}"></td>
+            <h1>Favorite Locations</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>PlaceId</th>
+                        <th>Display Name</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Get Earthquakes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="u: ${locations}">
+                      <td th:text="${u.id}"></td>
+                      <td th:text="${u.placeId}"></td>
+                      <td th:text="${u.name}"></td>
+                      <td th:text="${u.latitude}"></td>
+                      <td th:text="${u.longitude}"></td>
+                      <td><a th:href="@{/earthquakes/search/(lat=${u.latitude},lon=${u.longitude},location=${u.name})}">Get Earthquakes</a> </td>
               </tr>
           </tbody>
       </table>
