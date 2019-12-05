@@ -25,6 +25,18 @@
                 <td th:text="${eqSearch.minmag}"></td>
             </tr>
             <tr>
+                <th>Latitude</th>
+                <td th:text="${eqSearch.lat}"></td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td th:text="${eqSearch.lon}"></td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td th:text="${eqSearch.location}"></td>
+            </tr>
+            <tr>
                 <th>Title</th>
                 <td><a th:href="${featureCollection.metadata.url}" th:text="${featureCollection.metadata.title}"></a></td>
             </tr>
