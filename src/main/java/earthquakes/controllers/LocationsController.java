@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -43,7 +45,6 @@ public class LocationsController {
             LocSearch locSearch) {
         LocationQueryService e = new LocationQueryService();
         model.addAttribute("locSearch", locSearch);
-        // TODO: Actually do the search here and add results to the model
         String json = e.getJSON(locSearch.getLocation());
         model.addAttribute("json", json);
         List<Place> place = Place.ListFromJSON(json);
@@ -68,4 +69,13 @@ public class LocationsController {
       model.addAttribute("locations", locationRepository.findAll());
       return "locations/index";
     }
+
+    @DeleteMapping("/locations/delete/{id}")
+    public String delete(@PathVariable("id") long id, Model model) {
+        Location location = locationRepository.findById(id)
+            .orElseThrow(() -> new IllegalArgumentException("Invalid courseoffering Id:" + id));
+        locationRepository.delete(location);
+        model.addAttribute("locations", locationRepository.findAll());
+        return "locations/index";
+}
 }
