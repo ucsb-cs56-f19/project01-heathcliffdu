@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"> 
+  <head>
+    <title>Favorite Locations</title>
+    <div th:replace="bootstrap/bootstrap_head.html"></div>
+  </head>
+  <body>
+    <div class="container">
+      <div th:replace="bootstrap/bootstrap_nav_header.html"></div>
+
+      <h1>Favorite Locations</h1>
+      <table class="table">
+                <thead>
+                    <tr>
+                        <th>Uid</th>
+                        <th>Id</th>
+                        <th>PlaceId</th>
+                        <th>Name</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Get Earthquakes</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="u: ${locations}">
+                      <td th:text="${u.uid}"></td>
+                      <td th:text="${u.id}"></td>
+                      <td th:text="${u.placeId}"></td>
+                      <td th:text="${u.name}"></td>
+                      <td th:text="${u.latitude}"></td>
+                      <td th:text="${u.longitude}"></td>
+                      <td><a th:href="@{/earthquakes/search/(lat=${u.latitude},lon=${u.longitude},location=${u.name})}">Get Earthquakes</a> </td>
+                      <td>
+                        <form th:method="delete" th:action="@{/locations/delete/} + ${u.id}">
+                          <input type="submit" class="btn btn-danger" value="Delete" />
+                        </form>
+                      </td>
+              </tr>
+          </tbody>
+      </table>
+
+
+      <div th:replace="bootstrap/bootstrap_footer.html"></div>
+    </div>
+    <div th:replace="bootstrap/bootstrap_scripts.html"></div>
+  </body>
+</html>
